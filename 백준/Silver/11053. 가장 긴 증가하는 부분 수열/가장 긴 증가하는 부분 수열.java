@@ -33,6 +33,8 @@ public class Main {
         Arrays.sort(LIS);
         bw.write(LIS[arr.length-1]+"\n");
         bw.flush();
+        bw.close();
+        br.close();
         
         
 	}
