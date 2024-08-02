@@ -23,6 +23,7 @@ public class Main {
             bw.write(C[M][N] + "\n");
         }
         bw.flush();
+        bw.close();
 	}
 	
 	private static void calCombi() {
