@@ -24,6 +24,7 @@ public class Main {
         }
         bw.flush();
         bw.close();
+        br.close();
 	}
 	
 	private static void calCombi() {
