@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+//MST - Kruskal (ElogE)
 
 public class Main {
 	static class Edge implements Comparable<Edge> {
