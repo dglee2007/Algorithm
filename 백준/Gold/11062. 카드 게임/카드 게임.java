@@ -3,7 +3,7 @@ import java.util.*;
 public class Main {
     static int[] card;
     static int[] CardSum;
-    static int[][] dp;
+    static int[][] dp; //i~j까지 카드로 얻을 수 있는 최고점수
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -24,6 +24,7 @@ public class Main {
         bw.close();
         br.close();
     }
+    //카드가 i에서 j까지 남았을 때 얻을 수 있는 최고 점수
     static int cal(int i, int j) {
         if (dp[i][j]!=0){return dp[i][j];}
         int sum=0;
