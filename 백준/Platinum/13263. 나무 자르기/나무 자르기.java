@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.*;
 
 public class Main {
@@ -21,18 +22,20 @@ public class Main {
         return (double) (g.b - f.b) / (f.a - g.a);
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
+    public static void main(String[] args) throws IOException {
+        //Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         // 입력받기
-        int N = sc.nextInt();
+        int N = Integer.parseInt(br.readLine());
         int[] A = new int[N];
         int[] B = new int[N];
+        StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; ++i) {
-            A[i] = sc.nextInt();
+            A[i] = Integer.parseInt(st.nextToken());
         }
+        st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; ++i) {
-            B[i] = sc.nextInt();
+            B[i] = Integer.parseInt(st.nextToken());
         }
 
         // dp[0] = 0, dp 테이블을 채우면서 "f(.) = B[i]*x + dp[i]" 를 리스트에 추가
@@ -72,3 +75,5 @@ public class Main {
         System.out.println(dp[N - 1]);
     }
 }
+
+
